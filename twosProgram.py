@@ -40,7 +40,9 @@ if __name__ == '__main__':
     data = {0:(1,1)}    
 
 
-    #Now we generate every possible power of two below the maximum. 
+    #Now we generate every possible power of two below the maximum efficiently
+    # by only caring about the lead 25 digits, and using intermediate results to 
+    # save from recalculating lower powers of two many times.
 
     #First calculate the lead and tail 25 digits for every power of two from 1-10,000.
     for x in range(1,min(modulo,10000)):
