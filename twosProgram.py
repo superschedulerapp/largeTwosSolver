@@ -55,9 +55,9 @@ if __name__ == '__main__':
     for x in range(10000,modulo,10000):
         data[x] = reducit(b2[0]*data[x-10000][0],25),lastDigs(b2[1]*data[x-10000][1],25)
 
-    #Lastly calculate the lead 25 digits starting at the modulo and skipping the modulo
-    # with each interval. Because we can calculate all the values between the modulo 
-    # by combinations of 10k's and 1-10k's, all values less than the maximum 
+    #Lastly calculate the lead and tail 25 digits starting at the modulo and skipping the 
+    # modulo with each interval. Because we can calculate all the values between the 
+    # modulo by combinations of 10k's and 1-10k's, all values less than the maximum 
     # are precalculated. 
     for x in range(modulo,maxi+1,modulo):
         data[x] = reducit(base[0]*data[x-modulo][0],25),lastDigs(base[1]*data[x-modulo][1],25)
